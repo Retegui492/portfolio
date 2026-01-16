@@ -1,0 +1,36 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-list a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.1rem;
+  color: inherit;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.contact-list a svg {
+  font-size: 1.4rem;
+  color: #00ffcc;
+}
+
+.contact-list a:hover {
+  transform: translateX(6px);
+  color: #00ffcc;
+}
+
+.contact--name {
+   font-size: 2.2rem;
+   color: var(--neon);
+   text-shadow: 0 0 10px var(--neon);
+}

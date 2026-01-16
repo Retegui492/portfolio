@@ -1,0 +1,33 @@
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(11,15,20,0.95);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(0,255,204,0.15);
+}
+
+.logo {
+  color: var(--neon);
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+nav a {
+  color: var(--text-main);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--neon);
+}

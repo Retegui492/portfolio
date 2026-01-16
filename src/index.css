@@ -1,68 +1,313 @@
+/* ==============================
+   VARIÁVEIS GLOBAIS (THEME)
+================================ */
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  --bg-main: #0a1117;
+  --bg-card: #121826;
+  --bg-navbar: rgba(11, 15, 20, 0.95);
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  --neon: #00ffcc;
+  --neon-soft: rgba(0, 255, 204, 0.15);
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --text-main: #e5e7eb;
+  --text-muted: #9ca3af;
+
+  --radius: 12px;
+  --transition: all 0.3s ease;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+/* ==============================
+   RESET BÁSICO
+================================ */
+* {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ==============================
+   SCROLL SUAVE
+================================ */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ==============================
+   BODY GLOBAL
+================================ */
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+
+   /* Background cyber animado */
+  background-image:
+  radial-gradient(circle at 20% 20%, rgba(0, 255, 204, 0.09), transparent 45%),
+  radial-gradient(circle at 80% 80%, rgba(0, 153, 255, 0.08), transparent 45%),
+  linear-gradient(0deg, rgba(255,255,255,0.04) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+
+  background-size:
+    200% 200%,
+    200% 200%,
+    70px 70px,
+    70px 70px;
+
+  animation: cyberBgMove 40s ease-in-out infinite alternate;
+
+
+
+}
+
+@keyframes cyberBgMove {
+  from {
+    background-position:
+      0% 0%,
+      100% 100%,
+      0 0,
+      0 0;
+  }
+  to {
+    background-position:
+      100% 100%,
+      0% 0%,
+      140px 140px,
+      140px 140px;
+  }
+}
+
+
+
+/* ==============================
+   LINKS
+================================ */
+a {
+  color: var(--neon);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: #00e6b8;
+  text-shadow: 0 0 8px var(--neon);
+}
+
+/* ==============================
+   BOTÕES
+================================ */
+button {
+  background-color: var(--neon);
+  color: #0b0f14;
+  border: none;
+  padding: 12px 22px;
+  margin: 5px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+button:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 0 18px var(--neon);
+}
+
+/* ==============================
+   HEADINGS
+================================ */
+h1, h2, h3 {
+  margin-bottom: 15px;
+  font-weight: 600;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: 3rem;
+  color: var(--neon);
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+h2 {
+  font-size: 2.2rem;
+  color: var(--neon);
+}
+
+h3 {
+  font-size: 1.2rem;
+  color: var(--text-main);
+}
+
+/* ==============================
+   SEÇÕES (LAYOUT)
+================================ */
+section {
+  max-width: 1200px;
+  padding: 100px 20px;
+  margin: 0 auto 80px auto;
+  background: rgba(15, 20, 30, 0.85);
+  backdrop-filter: blur(6px);
+  border-radius: 14px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+/* ==============================
+   TÍTULO DE SEÇÃO
+================================ */
+.section-title {
+  font-size: 2.2rem;
+  color: var(--neon);
+  margin-bottom: 40px;
+  text-shadow: 0 0 10px var(--neon);
+}
+
+/* ==============================
+   GRID SYSTEM
+================================ */
+.grid {
+  display: grid;
+  gap: 30px;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* ==============================
+   CARD (BASE PROFISSIONAL)
+================================ */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--neon-soft);
+  border-radius: var(--radius);
+  padding: 30px;
+  transition: var(--transition);
+  position: relative;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius);
+  box-shadow: 0 0 0 transparent;
+  transition: var(--transition);
+  pointer-events: none;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card:hover::before {
+  box-shadow: 0 0 30px var(--neon-soft);
+}
+
+/* ==============================
+   NAVBAR (GLOBAL)
+================================ */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--bg-navbar);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  z-index: 1000;
+  border-bottom: 1px solid var(--neon-soft);
+  backdrop-filter: blur(6px);
+}
+
+nav .logo {
+  color: var(--neon);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+nav ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+nav a {
+  color: var(--text-main);
   font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+nav a:hover {
+  color: var(--neon);
+}
+
+/* ==============================
+   HOME / HERO
+================================ */
+#home h1 {
+  text-shadow: 0 0 15px var(--neon);
+}
+
+#home p {
+  margin-top: 20px;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}
+
+/* ==============================
+   LISTAS (ABOUT / SKILLS)
+================================ */
+ul {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+  color: var(--text-muted);
+}
+
+/* ==============================
+   CONTACT
+================================ */
+#contact p {
+  margin-bottom: 10px;
+  color: var(--text-muted);
+}
+
+/* ==============================
+   RESPONSIVO
+================================ */
+@media (max-width: 768px) {
+  nav {
+    padding: 15px 25px;
   }
-  a:hover {
-    color: #747bff;
+
+  h1 {
+    font-size: 2.2rem;
   }
-  button {
-    background-color: #f9f9f9;
+
+  h2 {
+    font-size: 1.8rem;
   }
+
+  section {
+    padding: 80px 20px;
+  }
+}
+
+
+
+
+
+main {
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 0 20px;
 }

@@ -1,12 +1,24 @@
+import './about.css'
+
 function About() {
   return (
-    <section>
-      <h2>Sobre mim</h2>
-      <p>
-        Sou formado em Ciência da Computação, com foco em desenvolvimento
-        front-end e cibersegurança. Atualmente estou construindo projetos
-        práticos para consolidar meus conhecimentos.
-      </p>
+    <section id="about">
+      <h2 className="section-title">Sobre Mim</h2>
+
+      <div className="card">
+        <p>
+          Sou bacharel em Ciência da Computação e estou em transição para o mercado
+          profissional, com foco em cibersegurança, redes e infraestrutura.
+
+
+
+        </p>
+        <p style={{marginTop:'15px'}}>
+          Tenho base prática, mentalidade analítica e busco minha primeira
+          oportunidade para atuar em ambientes reais, aplicando conhecimentos
+          técnicos e evoluindo continuamente.
+        </p>
+      </div>
     </section>
   )
 }
