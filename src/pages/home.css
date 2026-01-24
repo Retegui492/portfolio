@@ -70,14 +70,64 @@ p {
 @media (max-width: 768px) {
   .home {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    gap: 25px;
   }
 
+  /* FOTO MENOR E À ESQUERDA */
+  .home-avatar {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    align-self: flex-start;
+    margin-top: 10px;
+  }
+
+  .home-avatar::after {
+    content: '';
+    position: absolute;
+    right: -18px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 80px;
+
+    background: linear-gradient(
+     to bottom,
+      transparent,
+      #00ffcc,
+      transparent
+    );
+
+    box-shadow: 0 0 12px rgba(0, 255, 204, 0.6);
+  }
+   /* TEXTO NÃO CENTRALIZADO */
   .home-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .home-info h2 {
+    font-size: 2.1rem;
+    line-height: 1.2;
+    margin-top: 15px;
+  }
+
+  .home-info p {
+    font-size: 0.95rem;
+    text-align: left;
+    max-width: 100%
+  }
+
+  .home-card {
+    width: 100%;
   }
 }
+
+  
+
+ 
+
+
+
 
