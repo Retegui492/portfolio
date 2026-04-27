@@ -5,7 +5,7 @@ function Home() {
   return (
     <section id="home" className="home">
       <div className="home-avatar">
-        <img src="/images/profile.jpg" alt="Foto de Jhonatan" />
+        <img src="/images/profiles.jpeg" alt="Foto de Jhonatan" />
       </div>
 
       <div className="home-info">

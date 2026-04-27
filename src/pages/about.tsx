@@ -7,16 +7,16 @@ function About() {
 
       <div className="card">
         <p>
-          Sou bacharel em Ciência da Computação e estou em transição para o mercado
-          profissional, com foco em cibersegurança, redes e infraestrutura.
+          Bacharel em Ciência da Computação e pós-graduando em Defensive Cyber Security (Blue Team Operations) pela FIAP.
+
 
 
 
         </p>
         <p style={{marginTop:'15px'}}>
-          Tenho base prática, mentalidade analítica e busco minha primeira
-          oportunidade para atuar em ambientes reais, aplicando conhecimentos
-          técnicos e evoluindo continuamente.
+          Atuo no desenvolvimento de habilidades em cibersegurança, com foco em análise de tráfego (Wireshark), monitoramento de eventos (SIEM) e enumeração de superfícies de ataque com ferramentas como Nmap.
+
+Busco oportunidade para aplicar conhecimentos técnicos em ambientes reais, contribuindo para a segurança e evolução contínua dos sistemas.
         </p>
       </div>
     </section>
