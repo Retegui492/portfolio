@@ -6,9 +6,9 @@ function Projects() {
 
       <div className="grid grid-3">
         <div className="card">
-          <h3>Mini-SIEM (Python)</h3>
-          <p>Análise de logs e detecção de eventos suspeitos.</p>
-          <a href="https://github.com/Retegui492/mini-siem" target="_blank" rel="noopener noreferrer">
+          <h3>Rule Based Log Analyzer </h3>
+          <p>Análisador de logs baseado em regras para detecção de eventos suspeitos e geração de alertas de segurança</p>
+          <a href="https://github.com/Retegui492/Rule-Based-Log-Analyzer" target="_blank" rel="noopener noreferrer">
             🔗 Ver no GitHub
           </a>
         </div>
@@ -30,11 +30,11 @@ function Projects() {
         </div>
 
         <div className="card">
-          <h3>Mini SOC – Threat Detection Dashboard
+          <h3>Mini SIEM – Threat Detection Dashboard
           </h3>
-          <p>Mini SOC com análise de logs, detecção de ameaças e visualização em dashboard.</p>
-          <a className="disabled">
-               🚧 Em desenvolvimento
+          <p>Mini SIEM com correlação comportamental, detecção de ameaças baseada em padrões e dashboard interativo</p>
+          <a href="https://github.com/Retegui492/mini-siem-threat-detection-dashboard" target="_blank" rel="noopener noreferrer">
+            🔗 Ver no GitHub
           </a>  
         </div>
       </div>
