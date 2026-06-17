@@ -32,7 +32,10 @@ function Projects() {
         <div className="card">
           <h3>Mini SIEM – Threat Detection Dashboard
           </h3>
-          <p>Mini SIEM com correlação comportamental, detecção de ameaças baseada em padrões e dashboard interativo</p>
+          <p>Mini SIEM com analise de logs e dashboard interativo</p>
+          <a href="https://mini-siem-dashboard.streamlit.app" target="_blank" rel="noopener noreferrer">
+            🌐 Live Demo
+          </a>
           <a href="https://github.com/Retegui492/mini-siem-threat-detection-dashboard" target="_blank" rel="noopener noreferrer">
             🔗 Ver no GitHub
           </a>  
