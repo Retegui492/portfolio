@@ -9,10 +9,10 @@
   display: inline-block;
   text-align: center;
 
-  padding: 6px 10px; 
-  border-radius: 8px; 
+  padding: 6px 10px;
+  border-radius: 8px;
 
-  border: 1px solid var(--neon); 
+  border: 1px solid var(--neon);
   color: #fff;
 
   background-color: transparent;
@@ -34,10 +34,40 @@
   border: 1px solid #999;
   color: #999;
 
-  pointer-events: none; /* desativa clique */
+  pointer-events: none;
   cursor: not-allowed;
 }
 
 .card a:hover {
   color: #fff;
+}
+
+/* ========================= */
+/* LINKS DOS PROJETOS */
+/* ========================= */
+
+.project-links {
+  margin-top: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+}
+
+.project-links a {
+  border: none;
+  padding: 0;
+  background: transparent;
+
+  color: var(--neon);
+
+  font-size: 2.2rem;
+
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.project-links a:hover {
+  transform: scale(1.18);
+  color: var(--neon);
 }
