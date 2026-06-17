@@ -7,7 +7,7 @@ function Projects() {
       <div className="grid grid-3">
         <div className="card">
           <h3>Rule Based Log Analyzer </h3>
-          <p>Análisador de logs baseado em regras para detecção de eventos suspeitos e geração de alertas de segurança</p>
+          <p>Analisador de logs baseado em regras para detecção de eventos suspeitos</p>
           <a href="https://github.com/Retegui492/Rule-Based-Log-Analyzer" target="_blank" rel="noopener noreferrer">
             🔗 Ver no GitHub
           </a>
@@ -32,7 +32,7 @@ function Projects() {
         <div className="card">
           <h3>Mini SIEM – Threat Detection Dashboard
           </h3>
-          <p>Mini SIEM com analise de logs e dashboard interativo</p>
+          <p>Mini SIEM com análise de logs, detecção comportamental e dashboard interativo.</p>
           <a href="https://mini-siem-dashboard.streamlit.app" target="_blank" rel="noopener noreferrer">
             🌐 Live Demo
           </a>
